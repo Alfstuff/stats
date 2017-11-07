@@ -36,5 +36,4 @@ if ((!$url1) || ($url1 == "") || ($url1 == " ")) {
 }
 
 $page = fetch_page();
-
 include("pages/$page");

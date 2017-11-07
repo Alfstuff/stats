@@ -7,37 +7,9 @@ function fetch_page() {
 			$page = "home.php";
 			$GLOBALS['pagetitle'] = "Home - ";
 			break;
-		case "addtag" :
-			$page = "addtag.php";
-			$GLOBALS['pagetitle'] = "Add Tag - ";
-			break;
-		case "instagram" :
-			$page = "instagram.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "flickr" :
-			$page = "flickr.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "tagviewer" :
-			$page = "tagviewer.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "catviewer" :
-			$page = "catviewer.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "addcat" :
-			$page = "addcategory.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "socialviewer" :
-			$page = "socialviewer.php";
-			$GLOBALS['pagetitle'] = "Find Tag - ";
-			break;
-		case "desc" :
-			$page = "description.php";
-			$GLOBALS['pagetitle'] = "Create Description - ";
+		case "login" :
+			$page = "login.php";
+			$GLOBALS['pagetitle'] = "Login - ";
 			break;
 		default:
 			$page = "home.php";
@@ -67,6 +39,11 @@ function sanitize($term) {
 	$term = str_ireplace("response.","",$term);
 	$term = preg_replace('/[^A-Za-z0-9\-_@. ]/', '', $term); // Removes special chars.
 	return $term;
+}
+
+// Generic redirect
+function redirect($location) {
+	header("Location: {$location}");
 }
 
 

@@ -2,11 +2,20 @@
 require_once("inc/header.php");
 ?>
 
-<div id="page-wrapper">
+<div class="container-fluid">
 
-    <?php include ("inc/rewrite.php"); ?>
+    <div class="row">
+        <div class="col-md-8">
+            content
+            <?php include ("inc/rewrite.php"); ?>
+        </div>
+        
+        <div class="col-md-4">
+            <?php include("inc/sidebar.php"); ?>
+        </div>
+    </div>
 
 </div>
-<!-- /#page-wrapper -->
 
 <?php require_once("inc/footer.php"); ?>
+
